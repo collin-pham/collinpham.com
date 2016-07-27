@@ -187,7 +187,7 @@ h1 {
 }
 #sudoku-board input{
   display: inline-block;
-  font-size: 1em;
+  font-size: inherit;
   border-color: transparent;
   color: transparent;
   text-shadow : 0 0 0 #00CDCD;
@@ -356,11 +356,35 @@ form textarea:focus{
   .button {
     margin: auto auto 1em auto;
   }
+  p {
+    font-weight: 300;
+  }
 }
 
 /* For Mobile Devices */
 @media screen and (max-width: 480px){
-  body{
+  body {
+    font-size: 18px;
+  }
+  .one-half-col{
+    width: 90%;
+    float: none;
+    margin: auto;
+    text-align: center;
+  }
+  .two-third-col {
+    width: 90%;
+    margin: auto;
+  }
+  .full-col{
+    width: 90%;
+    float: none;
+    margin: auto;
+    text-align: center;
+  }
+  #sudoku-container{
+    width: 100%;
+    margin: auto;
     font-size: 18px;
   }
 }
