@@ -220,6 +220,9 @@ h1 {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 form {
   font-weight: 200;
+  -webkit-appearance: none;
+    -moz-appearance: none;
+      appearance: none;
 }
 form input {
   width: 100%;

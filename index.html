@@ -8,19 +8,31 @@
     <meta name = 'description' content = 'A collection of what I have learned, built and one day will do.'>
     <meta name = 'author' content = 'Collin Pham'>
     <meta name = 'keywords' content = 'Collin Pham, Northwestern University, Collin, Pham, Northwestern, University'>
+
     <!-- Mobile Specific Metas
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta name = 'viewport' content = 'width=device-width, initial-scale=1.0'>
+
     <!-- Font
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link href = 'https://fonts.googleapis.com/css?family=Raleway:200,300,400' rel = 'stylesheet' type = 'text/css'>
     <link href='http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css' rel='stylesheet' >
+
     <!-- CSS
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel = 'stylesheet' href = 'css/style.css'>
+    
+    <!-- JavaScript
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script src='./js/index.js' async></script>
+    <script src='./js/adapt.js' async></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js' defer></script>
+    <script src='./js/SudokuSolver.js' defer></script>
+
     <!-- Favicon
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel = 'icon' type = 'image/png' href = 'images/favicon.ico'>
+
   </head>
   <body>
     <a name = 'home'></a>
@@ -39,10 +51,10 @@
       </div>
       <div id='SideNav'>
         <a href = 'javascript:void(0)' id = 'closebtn' onclick = 'closeNav()'>&times;</a>
-        <a href = './blog.html#me'>About</a>
+        <a href = './blog.html#me' onclick = 'closeNav()'>About</a>
         <a onclick='smoothScroll("contact");closeNav()'>Contact</a>
-        <a href = './blog.html'>Blog</a>
-        <a onclick = 'gamble()'>Gamble</a>
+        <a href = './blog.html' onclick = 'closeNav()'>Blog</a>
+        <a onclick = 'gamble()' onclick = 'closeNav()'>Gamble</a>
       </div>
     </header>
 
@@ -187,9 +199,5 @@
     </div>
   <!-- Scripts
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js' defer></script>
-  <script src='./js/SudokuSolver.js' defer></script>
-  <script src='./js/index.js' defer></script>
-  <script src='./js/adapt.js' defer></script>
   </body>
 </html>
