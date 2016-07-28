@@ -349,8 +349,8 @@ form textarea:focus{
     border-radius: 0px;
     border: solid;
     border-width: 0px;
-    height: 1.4em;
-    width: 1.4em;
+    height: 1.2em;
+    width: 1.2em;
   }
   #MobileNavBar{
   width: auto;
@@ -365,7 +365,7 @@ form textarea:focus{
     width: auto;
   }
   #welcome-text{
-    width: 80%;
+    width: 90%;
     margin: auto;
   }
   #welcome-text br{
@@ -383,7 +383,7 @@ form textarea:focus{
 /* For Mobile Devices */
 @media screen and (max-width: 480px){
   body {
-    font-size: 18px;
+    font-size: 20px;
   }
   .one-half-col{
     width: 90%;
