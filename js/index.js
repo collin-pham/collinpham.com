@@ -26,10 +26,4 @@ for (var i = 0; i < 9; i++) {
     cell.appendChild(input)
   }
 }
-if (document.getElementById('sudoku-board').offsetWidth > screen.availWidth) {
-  document.getElementById('sudoku-container').style.fontSize = '18px'
 
-  while (document.getElementById('sudoku-board').offsetWidth / screen.availWidth > 0.7 && parseInt(document.getElementById('sudoku-container').style.fontSize) > 1) {
-    document.getElementById('sudoku-container').style.fontSize = parseInt(document.getElementById('sudoku-container').style.fontSize) - 1 + 'px'
-  }
-}

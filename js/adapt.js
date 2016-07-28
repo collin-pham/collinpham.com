@@ -7,6 +7,8 @@ function openNav () {
 function closeNav () {
   document.getElementById('SideNav').style.width = '0%'
 }
+// Make sure nav is closed on load
+closeNav()
 
 // Make a pretty scrolling function.
 function smoothScroll (id) {

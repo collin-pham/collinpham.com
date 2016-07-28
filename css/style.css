@@ -166,8 +166,12 @@ h1 {
   border: solid 2px;
   text-decoration: none;
   display: inline-block;
+  margin: auto auto 1em auto;
 }
 
+.row .button{
+  padding: 1px 2px 1px 2px;
+}
 /*Sudoku Board
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 #sudoku-board{
@@ -177,6 +181,8 @@ h1 {
 }
 #sudoku-board td {
   border: solid 2px;
+  height: 1em;
+  width: 1em;
 }
 #sudoku-row{
   border-bottom: 5px solid !important;
@@ -194,8 +200,7 @@ h1 {
   height: 1em;
   width: 1em;
   text-align: center;
-  margin: auto;
-
+  margin: 0;
 }
 #sudoku-board input:focus{ 
 	outline: #999999 solid;
@@ -220,15 +225,13 @@ h1 {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 form {
   font-weight: 200;
-  -webkit-appearance: none;
-    -moz-appearance: none;
-      appearance: none;
 }
 form input {
   width: 100%;
   font-size: inherit;
   margin: 1em auto 1em auto;
   border: #00CDCD solid 2px;
+  border-radius: 0px;
   font-family: 'Raleway', sans-serif;
   font-weight: 200;
   background: white;
@@ -236,6 +239,9 @@ form input {
   -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
       box-sizing: border-box;
+  -webkit-appearance: none;
+    -moz-appearance: none;
+      appearance: none;
 }
 form input:focus{
   outline: #999999 solid;
@@ -256,6 +262,7 @@ form textarea {
   margin: 1em auto 1em auto;
   border: #00CDCD solid 2px;
   font-family: 'Raleway', sans-serif;
+  border-radius: 0px;
   font-weight: 200;
   height: 10em;
   color: #999999;
@@ -263,6 +270,9 @@ form textarea {
   -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
       box-sizing: border-box;
+  -webkit-appearance: none;
+    -moz-appearance: none;
+      appearance: none;
 }
 form textarea:focus{
   outline: #999999 solid;
@@ -334,6 +344,14 @@ form textarea:focus{
     width: 100%;
     margin: auto;
   }
+  #sudoku-board input {
+    padding: 2px;
+    border-radius: 0px;
+    border: solid;
+    border-width: 0px;
+    height: 1.4em;
+    width: 1.4em;
+  }
   #MobileNavBar{
   width: auto;
   display: block;
@@ -356,11 +374,9 @@ form textarea:focus{
   #me-image{
     width: 66.66666666%;
   }
-  .button {
-    margin: auto auto 1em auto;
-  }
+
   p {
-    font-weight: 300;
+    font-weight: 400;
   }
 }
 
@@ -384,10 +400,5 @@ form textarea:focus{
     float: none;
     margin: auto;
     text-align: center;
-  }
-  #sudoku-container{
-    width: 100%;
-    margin: auto;
-    font-size: 18px;
   }
 }
