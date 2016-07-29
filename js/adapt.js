@@ -10,25 +10,6 @@ function closeNav () {
 // Make sure nav is closed on load
 closeNav()
 
-// Make a pretty scrolling function.
-function smoothScroll (id) {
-  var target = document.querySelector('a[id=' + id + ']').getBoundingClientRect().top
-  var speed = setInterval(function() { 
-    target = document.querySelector('a[id=' + id + ']').getBoundingClientRect().top
-    
-    if (target > 8) {
-      window.scrollBy(0, 7)
-    } else {
-      window.scrollBy(0, 1)
-    }
-
-    if (target <= 0) {
-      clearInterval(speed)
-      target = 0
-    }
-  }, 1)
-}
-
 // Got to a random project or blog post.
 function gamble () {
   var anchors = [
