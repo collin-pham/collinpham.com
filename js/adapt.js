@@ -13,6 +13,7 @@ closeNav()
 // Got to a random project or blog post.
 function gamble () {
   var anchors = [
+    './index.html#Local%20Technologies',
     './index.html#Eddard',
     './index.html#Rex',
     './index.html#Sentiment%20Analysis',
