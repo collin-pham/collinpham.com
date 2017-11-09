@@ -333,6 +333,12 @@ form textarea:focus{
     margin-right: 15%;
     text-align: center;
   }
+  .one-third-col {
+    width: 90%;
+    float: none;
+    margin: auto;
+    text-align: center;
+  }
   .full-col{
     width: 70%;
     float: none;
@@ -386,12 +392,6 @@ form textarea:focus{
     font-size: 20px;
   }
   .one-half-col{
-    width: 90%;
-    float: none;
-    margin: auto;
-    text-align: center;
-  }
-  .one-third-col {
     width: 90%;
     float: none;
     margin: auto;
