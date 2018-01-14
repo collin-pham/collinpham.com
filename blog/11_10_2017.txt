@@ -1,0 +1,31 @@
+I've been on heitus for over a year from this blog. A lot has happened between now and then. I'm going to write down some of those events here, while they are still fresh in my mind. 
+
+The summer I built this website I was also interning at Infrared5. The largest project I worked on there was a dashboard to display metrics of the servers our users were running. I learned a lot building a frontend web application, and many of those the lessons translated over to creating this website. Something I was frustrated with at Infrared5 was my lack of autonomy — I was not passionate about the product we were building as a company and so when I was assigned a specific project, the fire just wasn't there. I ended up with this feeling that I was constantly being told what to do. I did not like that feeling. 
+
+This was a very important realization for me, and I'm so greatful I got to learn this with Infrared5 — in the past, I've been fortunate enough to only work on ideas and projects that I truly am passionate about. After that summer, I learned passion is one of the most important things I, and more generally a team, needs to have to perform at an accetably high level — you can't fake passion. The question I found myself asking after this realization was how do you create passion — ignite that fire — in a group of people?
+
+After finishing my summer at Infrared5, I returned to Northwestern as a Junior with this question fresh in my mind. What happened soon after my return, was one of the best decisions I think I've made in my life to date — I decided to start a real company. 
+
+For those that have known me at Northwestern, you'll recall I have constantly been trying to start companies. Before Infrared5, I had tried to, unseccusfully, start four. When I started Local I was still frustrated about my summer experience and I wanted to prove to myself that I could do this. I decided a great way to motivate myself would be actually incorporating. Local Technologies was born on November 23rd. The idea was simple. In high school I started an odd jobs business with spread sheets and notebooks. I want to replicate this business model with databases and websites at a national scale. 
+
+And so, I coded. A lot. 
+
+Class. Code. Class. Code. Class. Code. 
+
+A month later, local-technologies.com was live: client side React, api gateway with lambdas and some simple emailing scripts. Thank you AWS for your amazingly robust services.
+
+Sometime during this coding binge (seriosuly, I think I blacked out for a month), Local was accepted into The Garage, which is a space for start up companies at Northwestern to live. Everytime I would go to the Garage to work, an advisor would tell me I should stop coding, and go get paying customers. This is usally a good idea for busineses that you know will not work. Local does not fall into this catagory. 
+
+After the initial version of the app was live, it was time to get customers. I should have listened to peoples advice, because getting paying customers is very hard.
+
+After this was done, I had to make a choice about what I wanted to do my Junior summer. There were two choice in my mind — getting another internship, or working on Local. Northwestern has a program called Wildfire, where 10 teams are awarded ten thousand dollars and access to a lot of smart people for the summer. I pitched and got in. 
+
+Brought on my sister somewhere along the way.
+
+Recruited three developers, one operations person.
+
+Grind.
+
+
+
+
