@@ -1,0 +1,11 @@
+.FlipCard {
+  backface-visibility: hidden;
+  background-color: black;
+  box-sizing: border-box;
+  color: white;
+  flex: 1;
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  width: 100%;
+}

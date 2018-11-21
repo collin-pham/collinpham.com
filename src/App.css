@@ -1,0 +1,74 @@
+.App {
+  min-height: 200vh;
+}
+.App-position {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.FlipCard-wrapper {
+  align-items: center;
+  background-image: linear-gradient(to bottom right, black, white);
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+}
+.FlipCard-container {
+  position: relative;
+  width: 550px;
+  height: 300px;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.FlipCard-front {
+  font-size: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.FlipCard-back {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.FlipCard-title {
+  font-size: 36px;
+}
+.FlipCard-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.FlipCard-header-item {
+  font-weight: 700;
+}
+.FlipCard-item:hover {
+  text-decoration: underline;
+}
+.FlipCard-item a {
+  font-weight: 200;
+  text-decoration: none;
+  color: white;
+}
+
+.FlipCard-contact {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.FlipCard-companies {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
