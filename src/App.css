@@ -1,5 +1,6 @@
 .App {
   min-height: 200vh;
+  width: 100vw;
 }
 .App-position {
   display: flex;
@@ -11,10 +12,10 @@
   align-items: center;
   background-image: linear-gradient(to bottom right, black, white);
   display: flex;
-  height: 100%;
+  height: 100vh;
   justify-content: center;
   position: fixed;
-  width: 100%;
+  width: 100vw;
 }
 .FlipCard-container {
   position: relative;
