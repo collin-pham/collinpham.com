@@ -14,8 +14,9 @@ class App extends Component {
     window.addEventListener('scroll', this.handleScroll);
   }
   handleScroll = (event) => {
+    const turn = ((document.documentElement.scrollTop || document.scrollingElement.scrollTop) / document.documentElement.clientHeight) * .5
     this.setState({
-      turn: ((document.documentElement.scrollTop || document.scrollingElement.scrollTop) / document.documentElement.clientHeight) * .5
+      turn: turn > 0.5 ? 0.5 : turn
     })
   }
   render() {
