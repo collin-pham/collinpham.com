@@ -1,0 +1,15 @@
+.Art {
+  align-items: center;
+  color: white;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.Art-title {
+  margin: 0px 20px;
+}
+.Art-title h3 {
+  font-weight: 200;
+}
