@@ -1,2 +1,2 @@
-# collin-pham.github.io
+# collinpham.com
 A website I made about me.
