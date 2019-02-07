@@ -4,27 +4,72 @@ import './LightCycle.css';
 import chroma from 'chroma-js';
 import moment from 'moment';
 
-const MILLISECONDS_PER_DAY = 86400000;
-
 export class LightCycle extends Component {
 	nightColors = chroma.scale(['#e9afff','black', '#ffac4f']).domain([0, 100]);
+	sunriseSunsetService = new SunriseSunsetService();
 
 	constructor(props) {
 		super(props);
+
 		this.state = {
 			isLoading: true,
 			isLoaded: false,
 			isErrored: false,
+			light: null,
 		};
 	}
 	async componentDidMount() {
-		const sunriseSunsetService = new SunriseSunsetService();
 		try {
-			await sunriseSunsetService.get();
+			await this.setColorPalette();
+			await this.sunriseSunsetService.get();
 
-			this.sunrise = sunriseSunsetService.getSunrise();
-			this.solarNoon = sunriseSunsetService.getSolarNoon();
-			this.sunset = sunriseSunsetService.getSunset();
+			// get a new color every second
+			this.intervalId = setInterval(() => {
+				this.setState({
+					color: this.getColor(),
+					light: moment() > this.sunriseSunsetService.getSunrise() && moment() < this.sunriseSunsetService.getSunset(),
+				});
+			}, 1000);
+		} catch (err) {
+			// reset state on error
+			this.setState({isLoading: false, isLoaded: false, isErrored: true, light: null});
+		}
+	}
+	async componentDidUpdate(prevProps, prevState) {
+		// if it the light value changed, we need to reset the color pallette
+		if (prevState.light && (prevState.light !== this.state.light)) {
+			await this.setColorPalette();
+			await this.sunriseSunsetService.get();
+		}
+	}
+	componentWillUnmount() {
+		clearInterval(this.intervalId);
+	}
+	setColorPalette = async () => {
+		try {
+			await this.sunriseSunsetService.get();
+			this.solarNoon = this.sunriseSunsetService.getSolarNoon();
+
+			// if it's before sunrise, the closest sunset was yesterday
+			if (moment() < this.sunriseSunsetService.getSunrise()) {
+				this.light = false;
+				this.sunrise = this.sunriseSunsetService.getSunrise();
+
+				await this.sunriseSunsetService.get(-1);
+				this.sunset = this.sunriseSunsetService.getSunset();
+
+			// if it's after sunset, the closest sunrise is tomorrow
+			} else if (moment() > this.sunriseSunsetService.getSunset()) {
+				this.light = false;
+				this.sunset = this.sunriseSunsetService.getSunset();
+
+				await this.sunriseSunsetService.get(1);
+				this.sunrise = this.sunriseSunsetService.getSunrise();
+			} else {
+				this.light = true;
+				this.sunrise = this.sunriseSunsetService.getSunrise();
+				this.sunset = this.sunriseSunsetService.getSunset();
+			}
 
 			this.dayColors = chroma
 				.scale(['#ffac4f','#ffee00', '#e9afff'])
@@ -32,22 +77,23 @@ export class LightCycle extends Component {
 				.domain([this.sunrise.valueOf(), this.solarNoon.valueOf(), this.sunset.valueOf()]);
 
 			this.nightColors = chroma
-				.scale(['#e9afff','black', '#ffac4f'])
-				.domain([this.sunset.valueOf(), this.sunrise.valueOf() + MILLISECONDS_PER_DAY]);
+				.scale(['#e9afff', 'black', '#ffac4f'])
+				.domain([this.sunset.valueOf(), this.sunrise.valueOf()]);
 
-			this.setState({isLoading: false, isLoaded: true, isErrored: false, color: this.getColor()});
-
-			this.intervalId = setInterval(() => { this.setState({ color: this.getColor() }); }, 1000);
+			this.setState({
+				isLoading: false,
+				isLoaded: true,
+				isErrored: false,
+				color: this.getColor(),
+				light: this.light,
+			});
 		} catch (err) {
-			this.setState({isLoading: false, isLoaded: false, isErrored: true});
+			throw new Error(err);
 		}
-	}
-	componentWillUnmount() {
-		clearInterval(this.intervalId);
 	}
 	getColor = () => {
 		const now = moment().valueOf();
-		return now > this.sunset.valueOf() ? this.nightColors(now) : this.dayColors(now);
+		return this.state.light ? this.dayColors(now) : this.nightColors(now);
 	}
 	render() {
 		if (this.state.isErrored) {

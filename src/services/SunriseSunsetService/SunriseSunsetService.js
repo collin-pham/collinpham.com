@@ -2,9 +2,10 @@ import axios from 'axios';
 import moment from 'moment';
 
 export class SunriseSunsetService {
-  get = async (lat, lng) => {
+  get = async (day = 0, lat = 37.7509, lng = -122.4153) => {
     try {
-      const data = (await axios.get(`https://api.sunrise-sunset.org/json?lat=${lat || 37.7509}&lng=${lng || -122.4153}&formatted=0`)).data;
+      const date = moment().add(day,'days').format('YYYY-MM-DD');
+      const data = (await axios.get(this.makeRequestString(lat, lng, date))).data;
 
       if (data.status !== 'OK') {
         throw new Error('Error fetching sunrise sunset data');
@@ -17,7 +18,9 @@ export class SunriseSunsetService {
       throw new Error(err);
     }
   }
-
+  makeRequestString = (lat, lng, date) => {
+    return `https://api.sunrise-sunset.org/json?lat=${lat}&lng=${lng}&formatted=0&date=${date}`
+  }
   getSunrise = () => {
     return this.sunrise;
   }
