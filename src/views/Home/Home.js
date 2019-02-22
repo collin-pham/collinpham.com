@@ -103,11 +103,6 @@ const Companies = () => (
 			</a>
 		</span>
 		<span className="FlipCard-item">
-			<a href="https://localstudentworkers.com" target="_blank" rel="noopener noreferrer">
-				localstudentworkers.com
-			</a>
-		</span>
-		<span className="FlipCard-item">
 			<a href="https://sanfrancigy.com" target="_blank" rel="noopener noreferrer">
 				sanfrancigy.com
 			</a>
