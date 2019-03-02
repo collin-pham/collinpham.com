@@ -80,18 +80,19 @@ export class LightCycle extends Component {
 				.scale(['#e9afff', 'black', '#ffac4f'])
 				.domain([this.sunset.valueOf(), this.sunrise.valueOf()]);
 
+			const now = moment().valueOf();
 			this.setState({
 				isLoading: false,
 				isLoaded: true,
 				isErrored: false,
-				color: this.getColor(),
+				color: this.light ? this.dayColors(now) : this.nightColors(now),
 				light: this.light,
 			});
 		} catch (err) {
 			throw new Error(err);
 		}
 	}
-	getColor = () => {
+	getColor = (light) => {
 		const now = moment().valueOf();
 		return this.state.light ? this.dayColors(now) : this.nightColors(now);
 	}
@@ -102,6 +103,7 @@ export class LightCycle extends Component {
 		if (this.state.isLoading) {
 			return ( <div className='LightCycle-loading'> <span>Loading</span> </div>);
 		}
+
 		return(
 			<div style={{backgroundColor: this.state.color}} className='LightCycle'>
 				<div className='LightCycle-title'>
