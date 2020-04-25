@@ -33,9 +33,7 @@ const DonationForm = (props) => {
 					return (
 						<div
 							className={`${i === amountKey ? 'DonationBox-amount-selected' : 'DonationBox-amount'}`}
-							onClick={() => {
-								setAmountKey(i);
-							}}
+							onClick={() => setAmountKey(i)}
 							key={i}
 						>
 							${a}

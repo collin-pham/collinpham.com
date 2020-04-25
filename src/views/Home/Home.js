@@ -40,9 +40,9 @@ export class Home extends Component {
 									<div className="FlipCard-header">
 										<div className="FlipCard-title">
 											<b>
-												<Link to='/art'>
-													Software Engineer
-												</Link>
+												<a href="https://medium.com/@collinpham" target="_blank" rel="noopener noreferrer">
+													Collin Pham
+												</a>
 											</b>
 										</div>
 										<div className="FlipCard-location">
@@ -50,8 +50,35 @@ export class Home extends Component {
 										</div>
 									</div>
 									<div className="FlipCard-body">
-										<Contact/>
-										<Companies/>
+										<div className='FlipCard-section'>
+											<span className="FlipCard-item">
+												<Link to='/art'>
+												<span role='img' aria-label='art'>&#x1f3a8;</span> art
+												</Link>
+											</span>
+											<span className="FlipCard-item">
+												<a href="https://medium.com/@collinpham" target="_blank" rel="noopener noreferrer">
+												<span role='img' aria-label='writings'>&#x270d;</span> writings
+												</a>
+											</span>
+											<span className="FlipCard-item">
+												<a href="https://twitter.com/collinjpham" target="_blank" rel="noopener noreferrer">
+													<span role='img' aria-label='follow me'>&#x1f30e;</span> follow me
+												</a>
+											</span>
+											<span className="FlipCard-item">
+												<a href="mailto:me@collinpham.com" rel="noopener noreferrer">
+													<span role='img' aria-label='contact me'>&#x1F48C;</span> contact me
+												</a>
+											</span>
+										</div>
+										<div className='FlipCard-section'>
+											<span className="FlipCard-item">
+												<a href="https://mistro.io" target="_blank" rel="noopener noreferrer">
+													mistro
+												</a>
+											</span>
+										</div>
 									</div>
 								</div>
 							</FlipCard>
@@ -63,49 +90,3 @@ export class Home extends Component {
 	}
 }
 
-const Contact = () => (
-	<div className="FlipCard-contact">
-		<span className="FlipCard-header-item"> contact me </span>
-		<span className="FlipCard-item">
-			<a href="http://collinpham.com" rel="noopener noreferrer">
-				collinpham.com
-			</a>
-		</span>
-		<span className="FlipCard-item">
-			<a href="https://github.com/collin-pham" target="_blank" rel="noopener noreferrer">
-				github.com/collin-pham
-			</a>
-		</span>
-		<span className="FlipCard-item">
-			<a href="https://twitter.com/collinjpham" target="_blank" rel="noopener noreferrer">
-				twitter.com/collinjpham
-			</a>
-		</span>
-		<span className="FlipCard-item">
-			<a href="mailto:me@collinpham.com" rel="noopener noreferrer">
-				me@collinpham.com
-			</a>
-		</span>
-	</div>
-);
-
-const Companies = () => (
-	<div className="FlipCard-companies">
-		<span className="FlipCard-header-item"> things i&#39;ve built </span>
-		<span className="FlipCard-item">
-			<a href="https://doyen.app" target="_blank" rel="noopener noreferrer">
-				doyen.app
-			</a>
-		</span>
-		<span className="FlipCard-item">
-			<a href="https://getspaceport.com" target="_blank" rel="noopener noreferrer">
-				getspaceport.com
-			</a>
-		</span>
-		<span className="FlipCard-item">
-			<a href="https://sanfrancigy.com" target="_blank" rel="noopener noreferrer">
-				sanfrancigy.com
-			</a>
-		</span>
-	</div>
-);

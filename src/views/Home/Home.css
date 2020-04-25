@@ -69,14 +69,8 @@
   color: white;
 }
 
-.FlipCard-contact {
+.FlipCard-section {
   padding-top: 20px;
   display: flex;
   flex-direction: column;
-}
-.FlipCard-companies {
-  padding-top: 20px;
-  display: flex;
-  flex-direction: column;
-  text-align: right;
 }
