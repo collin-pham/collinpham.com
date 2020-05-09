@@ -33,6 +33,11 @@ export const ArtBoard = () => {
 							</Link>
 						</li>
 						<li>
+							<Link to="/art/reel" className="Art-link">
+								reel
+							</Link>
+						</li>
+						<li>
 							<span className="Art-link-disabled">
 								more to come...
 							</span>

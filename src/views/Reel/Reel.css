@@ -1,0 +1,24 @@
+.Reel {
+	height: 100%;
+	text-align: center;
+	background-image: url('https://source.unsplash.com/random');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+}
+.Reel img {
+	width: 100%;
+}
+.Reel-refresh {
+	display: inline-block;
+	margin: 10px;
+	color: white;
+	cursor: pointer;
+}
+
+.Reel-refresh:hover {
+	text-decoration: underline;
+}
