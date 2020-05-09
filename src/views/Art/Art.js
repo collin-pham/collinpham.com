@@ -45,9 +45,9 @@ export const ArtBoard = () => {
 					</ul>
 				</div>
 			</div>
-			<div className="Art-donation" onClick={() => {setShowDonationBox(!showDonationBox)}}>
+			{/* <div className="Art-donation" onClick={() => {setShowDonationBox(!showDonationBox)}}>
 				{showDonationBox ? 'x' : '$'}
-			</div>
+			</div> */}
 		</div>
 	);
 };
