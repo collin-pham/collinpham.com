@@ -74,8 +74,8 @@ export class Home extends Component {
 										</div>
 										<div className='FlipCard-section'>
 											<span className="FlipCard-item">
-												<a href="https://mistro.io" target="_blank" rel="noopener noreferrer">
-													mistro
+												<a href="https://useStable.com" target="_blank" rel="noopener noreferrer">
+													stable
 												</a>
 											</span>
 										</div>
