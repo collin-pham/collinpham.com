@@ -44,7 +44,7 @@ export class Advice extends Component {
 
                 <p>Now we have a definition for good advice: good advice is verifiable and up-to-date. I think most people know this intuitively, but haven’t defined it explicitly; I hadn’t until writing this.</p>
 
-                <p>This is useful because a definition is a precondition for recognition — you need to know what you’re looking for in order to recognize it. So hopefully now you can recognize good advice.</p>
+                <p>A definition is useful because it’s a precondition for recognition — you need to know what you’re looking for in order to recognize it. Hopefully now, that’s a little bit easier.</p>
 
                 <p>And of course, take all of this advice with that in mind.</p>
                 
