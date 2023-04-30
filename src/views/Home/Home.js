@@ -53,13 +53,13 @@ export class Home extends Component {
 										<div className='FlipCard-section'>
 											<span className="FlipCard-item">
 												<Link to='/art'>
-												<span role='img' aria-label='art'>&#x1f3a8;</span> art
+													<span role='img' aria-label='art'>&#x1f3a8;</span> art
 												</Link>
 											</span>
 											<span className="FlipCard-item">
-												<a href="https://medium.com/@collinpham" target="_blank" rel="noopener noreferrer">
-												<span role='img' aria-label='writings'>&#x270d;</span> writings
-												</a>
+												<Link to='/writings'>
+													<span role='img' aria-label='writings'>&#x270d;</span> writings
+												</Link>
 											</span>
 											<span className="FlipCard-item">
 												<a href="https://twitter.com/collinjpham" target="_blank" rel="noopener noreferrer">

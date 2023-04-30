@@ -23,18 +23,6 @@
   flex-direction: column;
   margin: 0px 20px;
 }
-.Art-donation {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  padding: 20px 30px;
-  text-decoration: none;
-  color: black;
-}
-.Art-donation:hover {
-  cursor: pointer;
-  text-decoration: underline;
-}
 
 .Art-title h3 {
   font-weight: 200;
@@ -48,7 +36,4 @@
 }
 .Art-link:hover {
   text-decoration: underline;
-}
-.DonationBox {
-  color: white;
 }
