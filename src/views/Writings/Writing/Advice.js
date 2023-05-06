@@ -20,7 +20,7 @@ export class Advice extends Component {
 
                 <p>I think one reason people ignore good advice is because it’s hard to figure out what advice is good and what advice is bad. Recognizing good advice is a skill. And if you aren’t convinced that advice is good, the default is to ignore it.</p>
 
-                <p>So, one way to stop ignoring good advice is to get better at recognizing it, which isn’t hard if you know what to look for.</p>
+                <p>So, one way to stop ignoring good advice is to get better at recognizing it.</p>
 
                 <p>One characteristic of good advice is that it’s verifiable — the person giving the advice can explain why listening to it will cause the outcome you want. The important part of that sentence is cause. For example, if you want advice on how to get into Harvard, it’s best to speak with a person who understands what causes this to happen, because they’ll be able to explain precisely what to do to get in.</p>
 
