@@ -29,59 +29,61 @@ export class Home extends Component {
 				<div className="Home-position">
 					<div className="FlipCard-wrapper">
 						<div className="FlipCard-container">
-							<FlipCard turnY={this.state.turn} turnZ={this.state.turn}>
-								<div className="FlipCard-front">
-									Collin Pham
-								</div>
-							</FlipCard>
+							<div style={{zIndex: -999999 }}>
+								<FlipCard turnY={this.state.turn} turnZ={this.state.turn}>
+									<div className="FlipCard-front">
+										Collin Pham
+									</div>
+								</FlipCard>
+							</div>
 
-							<FlipCard turnY={this.state.turn + .5} turnZ={-(this.state.turn + .5)}>
-								<div className="FlipCard-back">
-									<div className="FlipCard-header">
-										<div className="FlipCard-title">
-											<b>
-												<a href="https://medium.com/@collinpham" target="_blank" rel="noopener noreferrer">
+							<div style={{zIndex: 999999 }}>
+								<FlipCard turnY={this.state.turn + .5} turnZ={-(this.state.turn + .5)}>
+									<div className="FlipCard-back">
+										<div className="FlipCard-header">
+											<div className="FlipCard-title">
+												<b>
 													Collin Pham
-												</a>
-											</b>
+												</b>
+											</div>
+											<div className="FlipCard-location">
+												San Francisco, CA
+											</div>
 										</div>
-										<div className="FlipCard-location">
-											San Francisco, CA
+										<div className="FlipCard-body">
+											<div className='FlipCard-section'>
+												<span className="FlipCard-item">
+													<Link to='/art'>
+														<span role='img' aria-label='art'>&#x1f3a8;</span> art
+													</Link>
+												</span>
+												<span className="FlipCard-item">
+													<Link to='/writings'>
+														<span role='img' aria-label='writings'>&#x270d;</span> writings
+													</Link>
+												</span>
+												<span className="FlipCard-item">
+													<a href="https://twitter.com/collinjpham" target="_blank" rel="noopener noreferrer">
+														<span role='img' aria-label='follow me'>&#x1f30e;</span> follow me
+													</a>
+												</span>
+												<span className="FlipCard-item">
+													<a href="mailto:me@collinpham.com" rel="noopener noreferrer">
+														<span role='img' aria-label='contact me'>&#x1F48C;</span> contact me
+													</a>
+												</span>
+											</div>
+											<div className='FlipCard-section'>
+												<span className="FlipCard-item">
+													<a href="https://useStable.com" target="_blank" rel="noopener noreferrer">
+														stable
+													</a>
+												</span>
+											</div>
 										</div>
 									</div>
-									<div className="FlipCard-body">
-										<div className='FlipCard-section'>
-											<span className="FlipCard-item">
-												<Link to='/art'>
-													<span role='img' aria-label='art'>&#x1f3a8;</span> art
-												</Link>
-											</span>
-											<span className="FlipCard-item">
-												<Link to='/writings'>
-													<span role='img' aria-label='writings'>&#x270d;</span> writings
-												</Link>
-											</span>
-											<span className="FlipCard-item">
-												<a href="https://twitter.com/collinjpham" target="_blank" rel="noopener noreferrer">
-													<span role='img' aria-label='follow me'>&#x1f30e;</span> follow me
-												</a>
-											</span>
-											<span className="FlipCard-item">
-												<a href="mailto:me@collinpham.com" rel="noopener noreferrer">
-													<span role='img' aria-label='contact me'>&#x1F48C;</span> contact me
-												</a>
-											</span>
-										</div>
-										<div className='FlipCard-section'>
-											<span className="FlipCard-item">
-												<a href="https://useStable.com" target="_blank" rel="noopener noreferrer">
-													stable
-												</a>
-											</span>
-										</div>
-									</div>
-								</div>
-							</FlipCard>
+								</FlipCard>
+							</div>
 						</div>
 					</div>
 				</div>
