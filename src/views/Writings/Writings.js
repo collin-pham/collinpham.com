@@ -11,6 +11,11 @@ export class Writings extends Component {
                 </div>
                 <div className="Writings-list">
                     <div>
+                        <Link to='/writings/long-term'>
+                            Long-Term
+                        </Link>
+                    </div>
+                    <div>
                         <Link to='/writings/advice'>
                             How To Listen To Advice (Like This)
                         </Link>

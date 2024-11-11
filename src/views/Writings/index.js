@@ -1,2 +1,2 @@
 export { Writings } from './Writings';
-export { Advice, NewThings } from './Writing';
+export { Advice, LongTerm, NewThings } from './Writing';

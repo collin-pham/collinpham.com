@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Art, Home, LightCycle, Reel, Writings } from './views';
-import { Advice, NewThings } from './views/Writings';
+import { Advice, LongTerm, NewThings } from './views/Writings';
 
 export default class App extends Component {
 	render() {
@@ -17,6 +17,7 @@ export default class App extends Component {
 					{/* Writings */}
 					<Route exact path="/writings" component={Writings} />
 					<Route exact path="/writings/advice" component={Advice} />
+					<Route exact path="/writings/long-term" component={LongTerm} />
 					<Route exact path="/writings/new-things" component={NewThings} />
 				</>
 			</Router>
